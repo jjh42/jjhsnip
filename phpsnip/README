@@ -1,0 +1,14 @@
+This contains snippets of PHP code - not really intended for being built into a proper library - but perhaps 
+helpful for you. Official I think they are (thanks Google Code Hosting) licensed under MIT license - but I add the 
+additional license of public domain.
+Feel free to email any questions - but I'm likely not the best person to be asking.
+Jonathan Hunt	<jjh@42quarks.com>
+
+
+gauth.inc - For authenticating with GData API - returns the Auth token.
+googleblogger.inc - For publishing to Google blogger - you will need to pass it an Auth token obtained with gauth.
+Example:
+$gauth = get_google_login("jjh@42quarks.com", "******", "blogger");
+$blogid="124214214214";
+$labels="deadfish, deadanimals";
+publish_to_blog($head, $content, $labels, $blogid, $gauth, $name="jjh", $email="jjh@42quarks.com");
